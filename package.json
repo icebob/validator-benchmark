@@ -1,0 +1,22 @@
+{
+  "name": "validator-benchmark",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "bench": "node index.js"
+  },
+  "keywords": [],
+  "author": "Icebob",
+  "license": "MIT",
+  "devDependencies": {
+    "ajv": "4.10.3",
+    "benchmark": "2.1.3",
+    "chalk": "1.1.3",
+    "joi": "10.1.0",
+    "lodash": "4.17.4",
+    "validate.js": "0.11.1",
+    "validator.js": "2.0.3",
+    "validatorjs": "3.11.0"
+  }
+}

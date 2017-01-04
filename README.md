@@ -1,0 +1,38 @@
+# validator benchmark
+
+## Packages in benchmark
+
+| Package | Stars | Quality |
+| ------- | ----- | ------- |
+| [validator.js](https://github.com/guillaumepotier/validator.js) | 231 | 70
+- [joi](https://github.com/hapijs/joi) | 4,101 | 89
+- [ajv](https://github.com/epoberezkin/ajv) | 1,112 | 87
+- [validatorjs](https://github.com/skaterdav85/validatorjs) | 355 | 71
+- [validate.js](https://github.com/ansman/validate.js) | 888 | 73
+
+## Benchmark #1 (simple object)
+
+### Test object
+```js
+let object = {
+    name: 'john doe',
+    email: 'john.doe@company.space',
+    firstName: null,
+    phone: null
+}
+```
+
+### Test suite
+
+### Result
+
+```
+Suite: Benchmark #1 - Simple object
+›› validator.js x 112,707 ops/sec ±0.24% (91 runs sampled)
+›› validate.js x 21,018 ops/sec ±0.59% (95 runs sampled)
+›› validatorjs x 122,977 ops/sec ±0.63% (94 runs sampled)
+›› joi x 32,841 ops/sec ±11.84% (90 runs sampled)
+›› ajv x 61,438 ops/sec ±1.07% (91 runs sampled)
+```
+
+[![Result](https://cloud.highcharts.com/images/yqowupa/0/600.png)](http://cloud.highcharts.com/show/yqowupa)
