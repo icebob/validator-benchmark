@@ -5,10 +5,10 @@
 | Package | Stars | Quality |
 | ------- | ----- | ------- |
 | [validator.js](https://github.com/guillaumepotier/validator.js) | 231 | 70
-- [joi](https://github.com/hapijs/joi) | 4,101 | 89
-- [ajv](https://github.com/epoberezkin/ajv) | 1,112 | 87
-- [validatorjs](https://github.com/skaterdav85/validatorjs) | 355 | 71
-- [validate.js](https://github.com/ansman/validate.js) | 888 | 73
+| [validate.js](https://github.com/ansman/validate.js) | 888 | 73
+| [validatorjs](https://github.com/skaterdav85/validatorjs) | 355 | 71
+| [joi](https://github.com/hapijs/joi) | 4,101 | 89
+| [ajv](https://github.com/epoberezkin/ajv) | 1,112 | 87
 
 ## Benchmark #1 (simple object)
 
