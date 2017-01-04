@@ -4,9 +4,9 @@ const Benchmarker = require("../benchmarker");
 const bench = new Benchmarker({ async: false, name: "Benchmark #1 - Simple object"});
 
 const obj = {
-    name: "john doe",
+    name: "John Doe",
     email: "john.doe@company.space",
-    firstName: "Icebob",
+    firstName: "John",
     phone: "123-4567",
 	age: 3
 };

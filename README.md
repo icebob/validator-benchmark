@@ -15,14 +15,16 @@
 ### Test object
 ```js
 let object = {
-    name: 'john doe',
-    email: 'john.doe@company.space',
-    firstName: null,
-    phone: null
+    name: "john doe",
+    email: "john.doe@company.space",
+    firstName: "John",
+    phone: "123-4567",
+    age: 3
 }
 ```
 
-### Test suite
+### Code
+[/suites/simple.js](https://github.com/icebob/validator-benchmark/blob/master/suites/simple.js)
 
 ### Result
 
