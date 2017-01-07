@@ -12,7 +12,7 @@
 | [mschema](https://github.com/mschema/mschema) (*) | 95 | 31
 | [parambulator](https://github.com/rjrodger/parambulator) (*) | 35 | 68
 
-(*) *not supported advanced types (email, url, ...etc)*
+ (*) not supported advanced types (email, url, ...etc)
 
 ## Benchmark #1 (simple object)
 
