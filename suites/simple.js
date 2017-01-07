@@ -8,7 +8,7 @@ const obj = {
     email: "john.doe@company.space",
     firstName: "John",
     phone: "123-4567",
-	age: 3
+	age: 33
 };
 
 // ---- validator.js ----
@@ -123,6 +123,32 @@ const obj = {
 	bench.add("ajv", () => {
 		return ajv.validate(constraints, obj);
 	});
+}());
+
+
+// ---- mschema ----
+(function() {
+	const mschema = require('mschema');
+
+	const constraints = {
+		name: {
+			type: "string",
+			minLength: 4,
+			maxLength: 25
+		},
+		email: "string",
+		firstName: "string",
+		phone: "string",
+		age: {
+			type: "number",
+			min: 18
+		}
+	};
+
+	bench.add("mschema", () => {
+		return mschema.validate(obj, constraints);
+	});
+
 }());
 
 

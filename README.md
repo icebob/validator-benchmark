@@ -9,6 +9,7 @@
 | [validatorjs](https://github.com/skaterdav85/validatorjs) | 355 | 71
 | [joi](https://github.com/hapijs/joi) | 4,101 | 89
 | [ajv](https://github.com/epoberezkin/ajv) | 1,112 | 87
+| [mschema](https://github.com/mschema/mschema) *not supported advanced types* | 95 | 31
 
 ## Benchmark #1 (simple object)
 
@@ -35,6 +36,7 @@ Suite: Benchmark #1 - Simple object
 ›› validatorjs x 122,977 ops/sec ±0.63% (94 runs sampled)
 ›› joi x 32,841 ops/sec ±11.84% (90 runs sampled)
 ›› ajv x 61,438 ops/sec ±1.07% (91 runs sampled)
+›› mschema x 215,844 ops/sec ±0.81% (94 runs sampled)
 ```
 
 [![Result](https://cloud.highcharts.com/images/yqowupa/0/600.png)](http://cloud.highcharts.com/show/yqowupa)
