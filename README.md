@@ -9,8 +9,10 @@
 | [validatorjs](https://github.com/skaterdav85/validatorjs) | 355 | 71
 | [joi](https://github.com/hapijs/joi) | 4,101 | 89
 | [ajv](https://github.com/epoberezkin/ajv) | 1,112 | 87
-| [mschema](https://github.com/mschema/mschema) *not supported advanced types (email, url, ...etc)* | 95 | 31
-| [parambulator](https://github.com/rjrodger/parambulator) | 35 | 68
+| [mschema](https://github.com/mschema/mschema) (*) | 95 | 31
+| [parambulator](https://github.com/rjrodger/parambulator) (*) | 35 | 68
+
+(*) *not supported advanced types (email, url, ...etc)*
 
 ## Benchmark #1 (simple object)
 
