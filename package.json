@@ -16,6 +16,7 @@
     "joi": "10.1.0",
     "lodash": "4.17.4",
     "mschema": "0.5.6",
+    "parambulator": "1.5.2",
     "validate.js": "0.11.1",
     "validator.js": "2.0.3",
     "validatorjs": "3.11.0"

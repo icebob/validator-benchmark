@@ -152,4 +152,36 @@ const obj = {
 }());
 
 
+// ---- mschema ----
+(function() {
+	const parambulator = require('parambulator');
+
+	const constraints = {
+		name: {
+			type$: "string",
+			required$: true,
+			minlen$: 4,
+			maxlen$: 25
+		},
+		email: { type$: "string", required$: true },
+		firstName: { type$: "string", required$: true },
+		phone: { type$: "string", required$: true },
+		age: {
+			type$: "number",
+			required$: true,
+			min$: 18
+		}
+	};
+
+	let check = parambulator(constraints);
+
+	bench.add("parambulator", () => {
+		return check.validate(obj, (err) => {
+			//console.log(err);
+		});		
+	});
+
+}());
+
+
 bench.run();

@@ -9,7 +9,8 @@
 | [validatorjs](https://github.com/skaterdav85/validatorjs) | 355 | 71
 | [joi](https://github.com/hapijs/joi) | 4,101 | 89
 | [ajv](https://github.com/epoberezkin/ajv) | 1,112 | 87
-| [mschema](https://github.com/mschema/mschema) *not supported advanced types* | 95 | 31
+| [mschema](https://github.com/mschema/mschema) *not supported advanced types (email, url, ...etc)* | 95 | 31
+| [parambulator](https://github.com/rjrodger/parambulator) | 35 | 68
 
 ## Benchmark #1 (simple object)
 
@@ -20,7 +21,7 @@ let object = {
     email: "john.doe@company.space",
     firstName: "John",
     phone: "123-4567",
-    age: 3
+    age: 33
 }
 ```
 
@@ -37,6 +38,7 @@ Suite: Benchmark #1 - Simple object
 ›› joi x 32,841 ops/sec ±11.84% (90 runs sampled)
 ›› ajv x 61,438 ops/sec ±1.07% (91 runs sampled)
 ›› mschema x 215,844 ops/sec ±0.81% (94 runs sampled)
+›› parambulator x 9,390 ops/sec ±2.54% (83 runs sampled)
 ```
 
 [![Result](https://cloud.highcharts.com/images/yqowupa/0/600.png)](http://cloud.highcharts.com/show/yqowupa)
