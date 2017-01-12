@@ -43,4 +43,4 @@ Suite: Benchmark #1 - Simple object
 ›› parambulator x 9,390 ops/sec ±2.54% (83 runs sampled)
 ```
 
-[![Result](https://cloud.highcharts.com/images/yqowupa/0/600.png)](http://cloud.highcharts.com/show/yqowupa)
+[![Result](https://cloud.highcharts.com/images/yqowupa/1/600.png)](http://cloud.highcharts.com/show/yqowupa)
