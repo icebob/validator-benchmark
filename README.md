@@ -11,6 +11,7 @@
 | [ajv](https://github.com/epoberezkin/ajv) | 1,112 | 87
 | [mschema](https://github.com/mschema/mschema) (*) | 95 | 31
 | [parambulator](https://github.com/rjrodger/parambulator) (*) | 35 | 68
+| [fast-jsvalidator](https://github.com/icebob/fast-jsvalidator) | - | -
 
  (*) not supported advanced types (email, url, ...etc)
 
@@ -32,15 +33,31 @@ let object = {
 
 ### Result
 
-```
+Platform info:
+==============
+   Windows_NT 6.1.7601 x64
+   Node.JS: 6.10.0
+   V8: 5.1.281.93
+   Intel(R) Core(TM) i7-4770K CPU @ 3.50GHz × 8
+
 Suite: Benchmark #1 - Simple object
-›› validator.js x 112,707 ops/sec ±0.24% (91 runs sampled)
-›› validate.js x 21,018 ops/sec ±0.59% (95 runs sampled)
-›› validatorjs x 122,977 ops/sec ±0.63% (94 runs sampled)
-›› joi x 32,841 ops/sec ±11.84% (90 runs sampled)
-›› ajv x 61,438 ops/sec ±1.07% (91 runs sampled)
-›› mschema x 215,844 ops/sec ±0.81% (94 runs sampled)
-›› parambulator x 9,390 ops/sec ±2.54% (83 runs sampled)
+√ validator.js x 112,358 ops/sec ±0.26% (90 runs sampled)
+√ validate.js x 20,944 ops/sec ±0.87% (90 runs sampled)
+√ validatorjs x 107,254 ops/sec ±0.92% (93 runs sampled)
+√ joi x 32,286 ops/sec ±11.46% (88 runs sampled)
+√ ajv x 60,728 ops/sec ±1.29% (90 runs sampled)
+√ mschema x 219,744 ops/sec ±1.10% (93 runs sampled)
+√ parambulator x 9,435 ops/sec ±2.04% (87 runs sampled)
+√ fast-jsvalidator x 3,904,814 ops/sec ±0.97% (87 runs sampled)
+
+   validator.js       -97.12%    (112,358 ops/sec)
+   validate.js        -99.46%     (20,944 ops/sec)
+   validatorjs        -97.25%    (107,254 ops/sec)
+   joi                -99.17%     (32,286 ops/sec)
+   ajv                -98.44%     (60,728 ops/sec)
+   mschema            -94.37%    (219,744 ops/sec)
+   parambulator       -99.76%      (9,435 ops/sec)
+   fast-jsvalidator     0.00%   (3,904,814 ops/sec)
 ```
 
-[![Result](https://cloud.highcharts.com/images/yqowupa/1/600.png)](http://cloud.highcharts.com/show/yqowupa)
+[![Result](https://cloud.highcharts.com/images/yqowupa/2/600.png)](http://cloud.highcharts.com/show/yqowupa)

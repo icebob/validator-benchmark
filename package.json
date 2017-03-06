@@ -13,6 +13,7 @@
     "ajv": "4.10.3",
     "benchmark": "2.1.3",
     "chalk": "1.1.3",
+    "fast-jsvalidator": "github:icebob/fast-jsvalidator",
     "joi": "10.1.0",
     "lodash": "4.17.4",
     "mschema": "0.5.6",
@@ -20,5 +21,8 @@
     "validate.js": "0.11.1",
     "validator.js": "2.0.3",
     "validatorjs": "3.11.0"
+  },
+  "dependencies": {
+    "benchmarkify": "1.0.0"
   }
 }

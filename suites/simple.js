@@ -1,7 +1,7 @@
 "use strict";
 
-const Benchmarker = require("../benchmarker");
-const bench = new Benchmarker({ async: false, name: "Benchmark #1 - Simple object"});
+const Benchmarkify = require("benchmarkify");
+const bench = new Benchmarkify({ async: false, name: "Benchmark #1 - Simple object"});
 
 const obj = {
     name: "John Doe",
@@ -152,7 +152,7 @@ const obj = {
 }());
 
 
-// ---- mschema ----
+// ---- parambulator ----
 (function() {
 	const parambulator = require('parambulator');
 
@@ -179,6 +179,38 @@ const obj = {
 		return check.validate(obj, (err) => {
 			//console.log(err);
 		});		
+	});
+
+}());
+
+// ---- fast-jsvalidator ----
+(function() {
+	const Validator = require('fast-jsvalidator');
+	const v = new Validator();
+
+	const constraints = {
+		name: {
+			type: "string",
+			min: 4,
+			max: 25
+		},
+		email: { type: "email" },
+		firstName: { type: "string" },
+		phone: { type: "string" },
+		age: {
+			type: "number",
+			min: 18
+		}
+	};
+
+	let check = v.compile(constraints);
+
+	let testObj = obj;
+
+	bench.add("fast-jsvalidator", () => {
+		let res = check(testObj);
+		if (res !== true)
+			throw new Error("Validation error!", res);	
 	});
 
 }());

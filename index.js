@@ -1,6 +1,6 @@
 "use strict";
 
-let Benchmarker = require("./benchmarker");
- Benchmarker.printHeader("JS validators benchmark");
+const Benchmarkify = require("benchmarkify");
+Benchmarkify.printHeader("JS validators benchmark");
 
 require("./suites/simple");
