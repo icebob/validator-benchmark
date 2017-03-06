@@ -33,6 +33,7 @@ let object = {
 
 ### Result
 
+```
 Platform info:
 ==============
    Windows_NT 6.1.7601 x64
