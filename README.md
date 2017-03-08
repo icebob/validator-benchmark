@@ -11,7 +11,7 @@
 | [ajv](https://github.com/epoberezkin/ajv) | 1,112 | 87
 | [mschema](https://github.com/mschema/mschema) (*) | 95 | 31
 | [parambulator](https://github.com/rjrodger/parambulator) (*) | 35 | 68
-| [fast-jsvalidator](https://github.com/icebob/fast-jsvalidator) | - | -
+| [fastest-validator](https://github.com/icebob/fastest-validator) | - | -
 
  (*) not supported advanced types (email, url, ...etc)
 
@@ -49,7 +49,7 @@ Suite: Benchmark #1 - Simple object
 √ ajv x 60,728 ops/sec ±1.29% (90 runs sampled)
 √ mschema x 219,744 ops/sec ±1.10% (93 runs sampled)
 √ parambulator x 9,435 ops/sec ±2.04% (87 runs sampled)
-√ fast-jsvalidator x 4,017,242 ops/sec ±0.20% (96 runs sampled)
+√ fastest-validator x 4,017,242 ops/sec ±0.20% (96 runs sampled)
 
    validator.js       -97.12%    (112,358 ops/sec)
    validate.js        -99.46%     (20,944 ops/sec)
@@ -58,7 +58,7 @@ Suite: Benchmark #1 - Simple object
    ajv                -98.44%     (60,728 ops/sec)
    mschema            -94.37%    (219,744 ops/sec)
    parambulator       -99.76%      (9,435 ops/sec)
-   fast-jsvalidator     0.00%   (4,017,242 ops/sec)
+   fastest-validator     0.00%   (4,017,242 ops/sec)
 ```
 
 [![Result](https://cloud.highcharts.com/images/yqowupa/2/600.png)](http://cloud.highcharts.com/show/yqowupa)

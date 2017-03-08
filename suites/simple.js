@@ -183,9 +183,9 @@ const obj = {
 
 }());
 
-// ---- fast-jsvalidator ----
+// ---- fastest-validator ----
 (function() {
-	const Validator = require('fast-jsvalidator');
+	const Validator = require('fastest-validator');
 	const v = new Validator();
 
 	const constraints = {
@@ -207,7 +207,7 @@ const obj = {
 
 	let testObj = obj;
 
-	bench.add("fast-jsvalidator", () => {
+	bench.add("fastest-validator", () => {
 		let res = check(testObj);
 		if (res !== true)
 			throw new Error("Validation error!", res);	
