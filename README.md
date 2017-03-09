@@ -61,4 +61,4 @@ Suite: Benchmark #1 - Simple object
    fastest-validator     0.00%   (3,292,995 ops/sec)
 ```
 
-[![Result](https://cloud.highcharts.com/images/yqowupa/3/800.png)](http://cloud.highcharts.com/show/yqowupa)
+[![Result](https://cloud.highcharts.com/images/yqowupa/4/800.png)](http://cloud.highcharts.com/show/yqowupa)
