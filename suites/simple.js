@@ -120,7 +120,7 @@ const obj = {
 		]
 	};
 	
-	var validate = ajv.compile(constraints);
+	const validate = ajv.compile(constraints);
 
 	bench.add("ajv", () => {
 		return validate(obj);
