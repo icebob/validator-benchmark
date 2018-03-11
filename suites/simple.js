@@ -119,9 +119,11 @@ const obj = {
 			"age"
 		]
 	};
+	
+	var validate = ajv.compile(constraints);
 
 	bench.add("ajv", () => {
-		return ajv.validate(constraints, obj);
+		return validate(obj);
 	});
 }());
 
