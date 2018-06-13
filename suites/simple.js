@@ -46,7 +46,7 @@ const obj = {
 		email: { email: true },
 		firstName: { presence: true },
 		phone: { presence: true },
-		age: { 
+		age: {
 			numericality: {
       			onlyInteger: true,
       			greaterThan: 18
@@ -89,7 +89,7 @@ const obj = {
 		phone: Joi.required(),
 		age: Joi.number().integer().min(18).required()
 	});
-	
+
 	bench.add("joi", () => {
 		return Joi.validate(obj, constraints);
 	});
@@ -119,7 +119,7 @@ const obj = {
 			"age"
 		]
 	};
-	
+
 	const validate = ajv.compile(constraints);
 
 	bench.add("ajv", () => {
@@ -180,7 +180,7 @@ const obj = {
 	bench.add("parambulator", () => {
 		return check.validate(obj, (err) => {
 			//console.log(err);
-		});		
+		});
 	});
 
 }());
@@ -212,10 +212,30 @@ const obj = {
 	bench.add("fastest-validator", () => {
 		let res = check(testObj);
 		if (res !== true)
-			throw new Error("Validation error!", res);	
+			throw new Error("Validation error!", res);
 	});
 
 }());
+
+// ---- yup ----
+(function() {
+  const yup = require('yup');
+
+  const schema = yup.object().shape({
+    name:      yup.string().min(4).max(25).required(),
+    email:     yup.string().email().required(),
+    firstName: yup.mixed().required(),
+    phone:     yup.mixed().required(),
+    age:       yup.number().integer().min(18).required(),
+  });
+
+
+  bench.add("yup", () => {
+    return schema.isValid(obj);
+  });
+
+}());
+
 
 
 bench.run();
