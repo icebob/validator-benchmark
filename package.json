@@ -23,6 +23,7 @@
     "validatorjs": "3.11.0"
   },
   "dependencies": {
-    "benchmarkify": "1.0.0"
+    "benchmarkify": "1.0.0",
+    "yup": "^0.25.1"
   }
 }
