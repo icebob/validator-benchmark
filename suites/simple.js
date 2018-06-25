@@ -1,7 +1,9 @@
 "use strict";
 
 const Benchmarkify = require("benchmarkify");
-const bench = new Benchmarkify({ async: false, name: "Benchmark #1 - Simple object"});
+const benchmark = new Benchmarkify("Validators benchmark").printHeader();
+
+let bench = benchmark.createSuite("Simple object");
 
 const obj = {
     name: "John Doe",
