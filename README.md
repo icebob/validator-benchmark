@@ -64,4 +64,4 @@ Suite: Simple object
    yup                      -99.8%         (10,139 rps)   (avg: 98μs)
 ```
 
-[![Result](https://user-images.githubusercontent.com/306521/41873673-f8e5a86e-78c5-11e8-8e84-364a11308536.png)](https://cloud.highcharts.com/show/yqowupa)
+[![Result](https://user-images.githubusercontent.com/306521/47523074-79cdec80-d897-11e8-86a0-ad07556be8bc.png)](https://cloud.highcharts.com/show/yqowupa)
