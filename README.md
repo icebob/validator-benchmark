@@ -65,4 +65,4 @@ Suite: Simple object
 -----------------------------------------------------------------------
 ```
 
-[![Result](https://user-images.githubusercontent.com/306521/68977782-57d43e80-07f9-11ea-885c-4c0d30de6b0a.png)](https://cloud.highcharts.com/show/yqowupa)
+[![Result](https://user-images.githubusercontent.com/306521/68978853-404a8500-07fc-11ea-94e4-0c25546dad04.png)](https://cloud.highcharts.com/show/yqowupa)
