@@ -73,8 +73,9 @@ const obj = {
 		age: "required|integer|min:18"
 	};
 
+	let validation = new Validator(obj, constraints);
+
 	bench.add("validatorjs", () => {
-		let validation = new Validator(obj, constraints);
 		return validation.passes();
 	});
 
