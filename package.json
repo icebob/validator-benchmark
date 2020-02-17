@@ -10,20 +10,22 @@
   "author": "Icebob",
   "license": "MIT",
   "devDependencies": {
-    "ajv": "^6.10.2",
+    "ajv": "^6.11.0",
     "benchmark": "2.1.4",
     "chalk": "^3.0.0",
-    "fastest-validator": "^1.0.0-beta1",
+    "fastest-validator": "^1.0.2",
     "joi": "^14.3.1",
+    "jsvalidator": "^1.2.0",
     "lodash": "^4.17.15",
     "mschema": "0.5.6",
+    "nope-validator": "^0.9.0",
     "parambulator": "1.5.2",
     "validate.js": "^0.13.1",
-    "validator.js": "2.0.3",
-    "validatorjs": "^3.17.1"
+    "validator.js": "^2.0.4",
+    "validatorjs": "^3.18.1",
+    "yup": "^0.28.1"
   },
   "dependencies": {
-    "benchmarkify": "^2.1.2",
-    "yup": "^0.27.0"
+    "benchmarkify": "^2.1.2"
   }
 }
