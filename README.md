@@ -35,34 +35,36 @@ let object = {
 ### Result
 
 ```
+========================
+  Validators benchmark
+========================
+
 Platform info:
 ==============
-   Windows_NT 6.1.7601 x64
-   Node.JS: 10.16.0
-   V8: 6.8.275.32-node.52
-   Intel(R) Core(TM) i7-4770K CPU @ 3.50GHz × 8
+   Windows_NT 10.0.19045 x64
+   Node.JS: 18.16.0
+   V8: 10.2.154.26-node.26
+   13th Gen Intel(R) Core(TM) i5-13500 × 20
 
 Suite: Simple object
-√ validator.js                566,527 rps
-√ validate.js                 212,279 rps
-√ validatorjs                 197,163 rps
-√ joi                         162,628 rps
-√ ajv                       7,246,357 rps
-√ mschema                     677,122 rps
-√ parambulator                 24,562 rps
-√ fastest-validator         8,279,376 rps
-√ yup                          20,783 rps
+√ validator.js              1 063 463 rps
+√ validate.js                 547 103 rps
+√ validatorjs                 383 264 rps
+√ joi                         304 857 rps
+√ ajv                      15 840 319 rps
+√ mschema                   1 357 728 rps
+√ parambulator                 49 903 rps
+√ fastest-validator        15 322 816 rps
+√ yup                          45 075 rps
 
-   validator.js            -93.16%        (566,527 rps)   (avg: 1μs)
-   validate.js             -97.44%        (212,279 rps)   (avg: 4μs)
-   validatorjs             -97.62%        (197,163 rps)   (avg: 5μs)
-   joi                     -98.04%        (162,628 rps)   (avg: 6μs)
-   ajv                     -12.48%      (7,246,357 rps)   (avg: 138ns)
-   mschema                 -91.82%        (677,122 rps)   (avg: 1μs)
-   parambulator             -99.7%         (24,562 rps)   (avg: 40μs)
-   fastest-validator            0%      (8,279,376 rps)   (avg: 120ns)
-   yup                     -99.75%         (20,783 rps)   (avg: 48μs)
+   validator.js            -93,29%      (1 063 463 rps)   (avg: 940ns)
+   validate.js             -96,55%        (547 103 rps)   (avg: 1μs)
+   validatorjs             -97,58%        (383 264 rps)   (avg: 2μs)
+   joi                     -98,08%        (304 857 rps)   (avg: 3μs)
+   ajv                          0%     (15 840 319 rps)   (avg: 63ns)
+   mschema                 -91,43%      (1 357 728 rps)   (avg: 736ns)
+   parambulator            -99,68%         (49 903 rps)   (avg: 20μs)
+   fastest-validator        -3,27%     (15 322 816 rps)   (avg: 65ns)
+   yup                     -99,72%         (45 075 rps)   (avg: 22μs)
 -----------------------------------------------------------------------
 ```
-
-[![Result](https://user-images.githubusercontent.com/306521/68978853-404a8500-07fc-11ea-94e4-0c25546dad04.png)](https://cloud.highcharts.com/show/yqowupa)
