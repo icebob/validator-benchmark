@@ -108,6 +108,7 @@ const obj = {
 	addFormats(ajv);
 
 	const constraints = {
+		type: "object",
 		properties: {
 			name: { type: "string", minLength: 4, maxLength: 25 },
 			email: { type: "string", format: "email" },
@@ -228,8 +229,8 @@ const obj = {
   const schema = yup.object().shape({
     name:      yup.string().min(4).max(25).required(),
     email:     yup.string().email().required(),
-    firstName: yup.mixed().required(),
-    phone:     yup.mixed().required(),
+    firstName: yup.string().required(),
+    phone:     yup.string().required(),
     age:       yup.number().integer().min(18).required(),
   });
 
@@ -240,6 +241,54 @@ const obj = {
 
 }());
 
+// ---- nope ----
+(function() {
+	const nope = require('nope-validator');
+
+	const schema = nope.object().shape({
+	  name:      nope.string().min(4).max(25).required(),
+	  email:     nope.string().email().required(),
+	  firstName: nope.string().required(),
+	  phone:     nope.string().required(),
+	  age:       nope.number().integer().min(18).required(),
+	});
+
+	let temp;
+
+	bench.add("nope", () => {
+		temp = schema.validate(obj);
+		if (temp !== undefined) {
+			throw new Error("Validation error!", temp);
+		}
+	});
+
+  }());
+
+// ---- jsvalidator ----
+(function() {
+	const jsvalidator = require("jsvalidator");
+
+	const schema = {
+		type: "object",
+		schema: [
+			{ name: "name", type: "string", min: 4, max: 25, required: true },
+			{ name: "email", type: "string", regex: /^\S+@\S+\.\S+$/, required: true },
+			{ name: "firstName", type: "string", required: true },
+			{ name: "phone", type: "string", required: true },
+			{ name: "age", type: "number", min: 18, required: true }
+		],
+		required: true
+	};
+
+	let temp;
+
+	bench.add("jsvalidator", () => {
+	  temp = jsvalidator.validate(obj, schema);
+	  if (temp.success !== true) {
+		throw new Error("Validation error!", temp.err);
+	  }
+	});
+  }());
 
 
 bench.run();
