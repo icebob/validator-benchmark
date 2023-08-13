@@ -311,7 +311,7 @@ const obj = {
 
 // ---- Zod ----
 (function () {
-	const { z}  = require('zod');
+	const { z } = require('zod');
 
 	const schema = z.object({
 		name: z.string().min(4).max(25),
