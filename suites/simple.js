@@ -84,7 +84,7 @@ const obj = {
 (function() {
 	const Joi = require('joi');
 
-	const constraints = Joi.object().keys({
+	const schema = Joi.object().keys({
 		name: Joi.string().min(4).max(25).required(),
 		email: Joi.string().email().required(),
 		firstName: Joi.required(),
@@ -93,7 +93,7 @@ const obj = {
 	});
 
 	bench.add("joi", () => {
-		return Joi.validate(obj, constraints);
+		return schema.validate(obj);
 	});
 
 }());
@@ -103,7 +103,9 @@ const obj = {
 // ---- ajv ----
 (function() {
 	const Ajv = require('ajv');
+	const addFormats = require("ajv-formats")
 	const ajv = new Ajv();
+	addFormats(ajv);
 
 	const constraints = {
 		properties: {
