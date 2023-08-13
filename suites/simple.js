@@ -6,24 +6,24 @@ const benchmark = new Benchmarkify("Validators benchmark").printHeader();
 let bench = benchmark.createSuite("Simple object");
 
 const obj = {
-    name: "John Doe",
-    email: "john.doe@company.space",
-    firstName: "John",
-    phone: "123-4567",
+	name: "John Doe",
+	email: "john.doe@company.space",
+	firstName: "John",
+	phone: "123-4567",
 	age: 33
 };
 
 // ---- validator.js ----
-(function() {
-	const is = require( 'validator.js' ).Assert;
-	const validator = require( 'validator.js' ).validator();
+(function () {
+	const is = require('validator.js').Assert;
+	const validator = require('validator.js').validator();
 
 	const constraints = {
-		name: [ is.notBlank(), is.ofLength( { min: 4, max: 25 } ) ],
+		name: [is.notBlank(), is.ofLength({ min: 4, max: 25 })],
 		email: is.email(),
 		firstName: is.notBlank(),
 		phone: is.notBlank(),
-		age: [ is.required(), is.greaterThan(18) ]
+		age: [is.required(), is.greaterThan(18)]
 	};
 
 	bench.add("validator.js", () => {
@@ -34,7 +34,7 @@ const obj = {
 
 
 // ---- validate.js ----
-(function() {
+(function () {
 	const validate = require("validate.js");
 
 	const constraints = {
@@ -50,8 +50,8 @@ const obj = {
 		phone: { presence: true },
 		age: {
 			numericality: {
-      			onlyInteger: true,
-      			greaterThan: 18
+				onlyInteger: true,
+				greaterThan: 18
 			}
 		}
 	};
@@ -62,7 +62,7 @@ const obj = {
 }());
 
 // ---- validatorjs ----
-(function() {
+(function () {
 	const Validator = require('validatorjs');
 
 	const constraints = {
@@ -81,7 +81,7 @@ const obj = {
 }());
 
 // ---- joi ----
-(function() {
+(function () {
 	const Joi = require('joi');
 
 	const schema = Joi.object().keys({
@@ -101,7 +101,7 @@ const obj = {
 
 
 // ---- ajv ----
-(function() {
+(function () {
 	const Ajv = require('ajv');
 	const addFormats = require("ajv-formats")
 	const ajv = new Ajv();
@@ -134,7 +134,7 @@ const obj = {
 
 
 // ---- mschema ----
-(function() {
+(function () {
 	const mschema = require('mschema');
 
 	const constraints = {
@@ -160,7 +160,7 @@ const obj = {
 
 
 // ---- parambulator ----
-(function() {
+(function () {
 	const parambulator = require('parambulator');
 
 	const constraints = {
@@ -191,7 +191,7 @@ const obj = {
 }());
 
 // ---- fastest-validator ----
-(function() {
+(function () {
 	const Validator = require('fastest-validator');
 	const v = new Validator();
 
@@ -223,34 +223,34 @@ const obj = {
 }());
 
 // ---- yup ----
-(function() {
-  const yup = require('yup');
+(function () {
+	const yup = require('yup');
 
-  const schema = yup.object().shape({
-    name:      yup.string().min(4).max(25).required(),
-    email:     yup.string().email().required(),
-    firstName: yup.string().required(),
-    phone:     yup.string().required(),
-    age:       yup.number().integer().min(18).required(),
-  });
+	const schema = yup.object().shape({
+		name: yup.string().min(4).max(25).required(),
+		email: yup.string().email().required(),
+		firstName: yup.string().required(),
+		phone: yup.string().required(),
+		age: yup.number().integer().min(18).required(),
+	});
 
 
-  bench.add("yup", () => {
-    return schema.isValid(obj);
-  });
+	bench.add("yup", () => {
+		return schema.isValid(obj);
+	});
 
 }());
 
 // ---- nope ----
-(function() {
+(function () {
 	const nope = require('nope-validator');
 
 	const schema = nope.object().shape({
-	  name:      nope.string().min(4).max(25).required(),
-	  email:     nope.string().email().required(),
-	  firstName: nope.string().required(),
-	  phone:     nope.string().required(),
-	  age:       nope.number().integer().min(18).required(),
+		name: nope.string().min(4).max(25).required(),
+		email: nope.string().email().required(),
+		firstName: nope.string().required(),
+		phone: nope.string().required(),
+		age: nope.number().integer().min(18).required(),
 	});
 
 	let temp;
@@ -262,10 +262,10 @@ const obj = {
 		}
 	});
 
-  }());
+}());
 
 // ---- jsvalidator ----
-(function() {
+(function () {
 	const jsvalidator = require("jsvalidator");
 
 	const schema = {
@@ -283,12 +283,50 @@ const obj = {
 	let temp;
 
 	bench.add("jsvalidator", () => {
-	  temp = jsvalidator.validate(obj, schema);
-	  if (temp.success !== true) {
-		throw new Error("Validation error!", temp.err);
-	  }
+		temp = jsvalidator.validate(obj, schema);
+		if (temp.success !== true) {
+			throw new Error("Validation error!", temp.err);
+		}
 	});
-  }());
+}());
+
+// ---- Valibot ----
+(function () {
+	const v = require('valibot');
+
+	const schema = v.object({
+		name: v.string([v.minLength(4), v.maxLength(25)]),
+		email: v.string([v.email()]),
+		firstName: v.string(),
+		phone: v.string(),
+		age: v.number([v.minValue(18)]),
+	});
+
+
+	bench.add("Valibot", () => {
+		return schema.parse(obj);
+	});
+
+}());
+
+// ---- Zod ----
+(function () {
+	const { z}  = require('zod');
+
+	const schema = z.object({
+		name: z.string().min(4).max(25),
+		email: z.string().email(),
+		firstName: z.string(),
+		phone: z.string(),
+		age: z.number().int().gte(18),
+	});
+
+
+	bench.add("Zod", () => {
+		return schema.parse(obj);
+	});
+
+}());
 
 
 bench.run();
