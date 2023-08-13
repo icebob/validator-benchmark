@@ -1,6 +1,6 @@
 {
   "name": "validator-benchmark",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,20 +10,18 @@
   "author": "Icebob",
   "license": "MIT",
   "devDependencies": {
-    "ajv": "^6.10.2",
-    "benchmark": "2.1.4",
-    "chalk": "^3.0.0",
-    "fastest-validator": "^1.0.0-beta1",
-    "joi": "^14.3.1",
-    "lodash": "^4.17.15",
+    "benchmarkify": "^3.0.0",
+    "lodash": "^4.17.21"
+  },
+  "dependencies": {
+    "ajv": "^8.12.0",
+    "fastest-validator": "^1.17.0",
+    "joi": "^17.9.2",
     "mschema": "0.5.6",
     "parambulator": "1.5.2",
     "validate.js": "^0.13.1",
-    "validator.js": "2.0.3",
-    "validatorjs": "^3.17.1"
-  },
-  "dependencies": {
-    "benchmarkify": "^2.1.2",
-    "yup": "^0.27.0"
+    "validator.js": "^2.0.4",
+    "validatorjs": "^3.22.1",
+    "yup": "^1.2.0"
   }
 }
