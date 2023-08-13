@@ -48,25 +48,29 @@ Platform info:
    Memory: 32 GB
 
 Suite: Simple object
-√ validator.js              1 034 473 rps
-√ validate.js                 551 637 rps
-√ validatorjs                 369 036 rps
-√ joi                         321 142 rps
-√ ajv                      13 513 907 rps
-√ mschema                   1 322 497 rps
-√ parambulator                 50 392 rps
-√ fastest-validator        15 290 993 rps
-√ yup                          89 046 rps
+√ validator.js              1 052 002 rps
+√ validate.js                 548 263 rps
+√ validatorjs                 370 125 rps
+√ joi                         318 588 rps
+√ ajv                      14 153 672 rps
+√ mschema                   1 304 864 rps
+√ parambulator                 50 230 rps
+√ fastest-validator        15 105 474 rps
+√ yup                          81 920 rps
+√ nope                      3 499 180 rps
+√ jsvalidator               1 804 324 rps
 
-   validator.js            -93,23%      (1 034 473 rps)   (avg: 966ns)
-   validate.js             -96,39%        (551 637 rps)   (avg: 1μs)
-   validatorjs             -97,59%        (369 036 rps)   (avg: 2μs)
-   joi                      -97,9%        (321 142 rps)   (avg: 3μs)
-   ajv                     -11,62%     (13 513 907 rps)   (avg: 73ns)
-   mschema                 -91,35%      (1 322 497 rps)   (avg: 756ns)
-   parambulator            -99,67%         (50 392 rps)   (avg: 19μs)
-   fastest-validator            0%     (15 290 993 rps)   (avg: 65ns)
-   yup                     -99,42%         (89 046 rps)   (avg: 11μs)
+   validator.js            -93,04%      (1 052 002 rps)   (avg: 950ns)
+   validate.js             -96,37%        (548 263 rps)   (avg: 1μs)
+   validatorjs             -97,55%        (370 125 rps)   (avg: 2μs)
+   joi                     -97,89%        (318 588 rps)   (avg: 3μs)
+   ajv                       -6,3%     (14 153 672 rps)   (avg: 70ns)
+   mschema                 -91,36%      (1 304 864 rps)   (avg: 766ns)
+   parambulator            -99,67%         (50 230 rps)   (avg: 19μs)
+   fastest-validator            0%     (15 105 474 rps)   (avg: 66ns)
+   yup                     -99,46%         (81 920 rps)   (avg: 12μs)
+   nope                    -76,84%      (3 499 180 rps)   (avg: 285ns)
+   jsvalidator             -88,06%      (1 804 324 rps)   (avg: 554ns)
 -----------------------------------------------------------------------
 
 ```
