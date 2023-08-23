@@ -304,7 +304,7 @@ const obj = {
 
 
 	bench.add("Valibot", () => {
-		return schema.parse(obj);
+		return v.parse(schema, obj);
 	});
 
 }());
