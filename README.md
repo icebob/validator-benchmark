@@ -50,33 +50,33 @@ Platform info:
    Memory: 32 GB
 
 Suite: Simple object
-√ validator.js              1 034 165 rps
-√ validate.js                 557 089 rps
-√ validatorjs                 370 808 rps
-√ joi                         325 518 rps
-√ ajv                      14 193 429 rps
-√ mschema                   1 344 248 rps
-√ parambulator                 50 734 rps
-√ fastest-validator        15 001 791 rps
-√ yup                          82 656 rps
-√ nope                      3 403 903 rps
-√ jsvalidator               1 778 932 rps
-√ Valibot                     414 225 rps
-√ Zod                       1 858 197 rps
+√ validator.js              1 015 954 rps
+√ validate.js                 541 653 rps
+√ validatorjs                 371 656 rps
+√ joi                         328 248 rps
+√ ajv                      13 746 633 rps
+√ mschema                   1 328 883 rps
+√ parambulator                 50 065 rps
+√ fastest-validator        14 922 257 rps
+√ yup                          83 047 rps
+√ nope                      3 513 749 rps
+√ jsvalidator               1 725 869 rps
+√ Valibot                   4 241 779 rps
+√ Zod                       1 819 350 rps
 
-   validator.js            -93,11%      (1 034 165 rps)   (avg: 966ns)
-   validate.js             -96,29%        (557 089 rps)   (avg: 1μs)
-   validatorjs             -97,53%        (370 808 rps)   (avg: 2μs)
-   joi                     -97,83%        (325 518 rps)   (avg: 3μs)
-   ajv                      -5,39%     (14 193 429 rps)   (avg: 70ns)
-   mschema                 -91,04%      (1 344 248 rps)   (avg: 743ns)
-   parambulator            -99,66%         (50 734 rps)   (avg: 19μs)
-   fastest-validator            0%     (15 001 791 rps)   (avg: 66ns)
-   yup                     -99,45%         (82 656 rps)   (avg: 12μs)
-   nope                    -77,31%      (3 403 903 rps)   (avg: 293ns)
-   jsvalidator             -88,14%      (1 778 932 rps)   (avg: 562ns)
-   Valibot                 -97,24%        (414 225 rps)   (avg: 2μs)
-   Zod                     -87,61%      (1 858 197 rps)   (avg: 538ns)
+   validator.js            -93,19%      (1 015 954 rps)   (avg: 984ns)
+   validate.js             -96,37%        (541 653 rps)   (avg: 1μs)
+   validatorjs             -97,51%        (371 656 rps)   (avg: 2μs)
+   joi                      -97,8%        (328 248 rps)   (avg: 3μs)
+   ajv                      -7,88%     (13 746 633 rps)   (avg: 72ns)
+   mschema                 -91,09%      (1 328 883 rps)   (avg: 752ns)
+   parambulator            -99,66%         (50 065 rps)   (avg: 19μs)
+   fastest-validator            0%     (14 922 257 rps)   (avg: 67ns)
+   yup                     -99,44%         (83 047 rps)   (avg: 12μs)
+   nope                    -76,45%      (3 513 749 rps)   (avg: 284ns)
+   jsvalidator             -88,43%      (1 725 869 rps)   (avg: 579ns)
+   Valibot                 -71,57%      (4 241 779 rps)   (avg: 235ns)
+   Zod                     -87,81%      (1 819 350 rps)   (avg: 549ns)
 -----------------------------------------------------------------------
 
 ```
