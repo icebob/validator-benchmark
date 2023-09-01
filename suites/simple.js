@@ -1,7 +1,7 @@
 "use strict";
 
 const Benchmarkify = require("benchmarkify");
-const benchmark = new Benchmarkify("Validators benchmark").printHeader();
+const benchmark = new Benchmarkify("Validators benchmark", { drawChart: true, chartImage: true }).printHeader();
 
 let bench = benchmark.createSuite("Simple object");
 
