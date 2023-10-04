@@ -328,5 +328,22 @@ const obj = {
 
 }());
 
+// ---- unknownutil ----
+(function () {
+	const { isString, isNumber, isObjectOf, ensure } = require('unknownutil');
+	const isSchema = isObjectOf({
+		name: isString,
+		email: isString,
+		firstName: isString,
+		phone: isString,
+		age: isNumber
+	})
+
+	bench.add('unknownutil', () => {
+		return ensure(obj, isSchema);
+	});
+
+}());
+
 
 bench.run();

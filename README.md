@@ -15,6 +15,7 @@
 | [Valibot](https://github.com/fabian-hiller/valibot) |
 | [yup](https://github.com/jquense/yup) |
 | [Zod](https://github.com/colinhacks/zod) |
+| [unknownutil](https://github.com/lambdalisue/deno-unknownutil) (*) |
 
  (*) not supported advanced types (email, url, ...etc)
 
