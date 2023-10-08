@@ -328,5 +328,15 @@ const obj = {
 
 }());
 
+// ---- Typia ----
+(function () {
+	const { validate } = require('./typia/is_compiled');
+
+	bench.add("Typia", () => {
+		return validate(obj).data;
+	});
+
+}());
+
 
 bench.run();

@@ -15,6 +15,7 @@
 | [Valibot](https://github.com/fabian-hiller/valibot) |
 | [yup](https://github.com/jquense/yup) |
 | [Zod](https://github.com/colinhacks/zod) |
+| [Typia](https://github.com/samchon/typia) |
 
  (*) not supported advanced types (email, url, ...etc)
 
