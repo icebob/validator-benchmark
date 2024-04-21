@@ -338,5 +338,24 @@ const obj = {
 
 }());
 
+// ---- TypeBox ----
+(function () {
+	const { Type } = require('@sinclair/typebox')
+	const { Value } = require('@sinclair/typebox/value')
+	
+	const T = Type.Object({
+		name: Type.String({ minLength: 4, maxLength: 25 }),
+		email: Type.String({ format: "email" }),
+		firstName: Type.String(),
+		phone: Type.String(),
+		age: Type.Number({ minimum: 18 })
+	});
+
+	bench.add("TypeBox", () => {
+		return Value.Check(T, obj);
+	});
+
+}());
+
 
 bench.run();
