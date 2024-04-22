@@ -338,5 +338,28 @@ const obj = {
 
 }());
 
+// ---- TypeBox ----
+(function () {
+	const { FormatRegistry, Type } = require('@sinclair/typebox')
+	const { TypeCompiler } = require('@sinclair/typebox/compiler')
+
+	FormatRegistry.Set("email", value => /^\S+@\S+\.\S+$/.test(value))
+	
+	const schema = TypeCompiler.Compile(
+		Type.Object({
+			name: Type.String({ minLength: 4, maxLength: 25 }),
+			email: Type.String({ format: "email" }),
+			firstName: Type.String(),
+			phone: Type.String(),
+			age: Type.Number({ minimum: 18 })
+		})
+	);
+
+	bench.add("TypeBox", () => {
+		return schema.Check(obj);
+	});
+
+}());
+
 
 bench.run();
